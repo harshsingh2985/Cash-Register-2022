@@ -4,10 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cash-Register</title>
+    <title>Cash-Register Manager</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1></h1>
-    
+
+    <div class="container">
+        <h1 class="heading">Cash Register</h1>
+        <p class="description">
+            Enter the Bill Amount And Cash given by the customer and know Minumim Number of Notes to Return.
+
+        </p>
+        <!-- label -->
+        <label for="bill-amount">Bill Amount</label>
+        <input id="bill-amount" type="text">
+
+        <!-- button -->
+        <button>Check</button>
+
+        <!-- label 2 -->
+        <label for="cash-given">cash given</label>
+
+        <input class="cash-given" type="text">
+    </div>
+
+    <!-- table -->
+    <table>
+        <caption>Return change</caption>
+        <tr>
+            <th>No.of notes</th>
+            <td></td>
+        </tr>
+        <!-- tr2 -->
+        <tr>
+            <th>Notes</th>
+            <td>2000</td>
+            <td>500</td>
+            <td>100</td>
+            <td>50</td>
+            <td>20</td>
+            <td>10</td>
+            <td>5</td>
+            <td>1</td>
+
+
+        </tr>
+    </table>
+    <script src="app.js"></script>
+
+
 </body>
 </html>
