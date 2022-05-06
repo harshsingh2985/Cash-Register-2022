@@ -7,13 +7,25 @@ checkButton.addEventListener("click",function validateBillAndCashAmount(){
     // to block the message we have to write the event
     message.style.display="none"
     if(billamount.value>0){
+        if(cashGiven.value>=billamount){
 
+        }
+        else{
+
+        }
     }
     else{
-        message.style.display="block"
-        message.innerText="The bill Amount Should Be Greater Than 0"
+        showmessage("Invalid Cash-Amount");
+        
+        
     }
 })
+
+function showmessage(message){
+    message.style.display="block"
+    message.innerText="The bill Amount Should Be Greater Than 0"
+
+}
 
 
 
