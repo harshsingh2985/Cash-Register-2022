@@ -6,7 +6,6 @@ const message=document.querySelector("#error-message")
 checkButton.addEventListener("click",function validateBillAndCashAmount(){
     // to block the message we have to write the event
     hidemessage();
-
     if(billamount.value>0){
         if(cashGiven.value>=billamount.value){
             const amounttobereturned=cashgiven.value-billamount.value;
@@ -36,7 +35,7 @@ function hidemessage(){
 function showmessage(msg){
     message.style.display="block";
     message.innerText=msg;
-    
+
 
 
 }
