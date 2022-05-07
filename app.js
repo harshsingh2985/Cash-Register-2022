@@ -5,25 +5,39 @@ const message=document.querySelector("#error-message")
 
 checkButton.addEventListener("click",function validateBillAndCashAmount(){
     // to block the message we have to write the event
-    message.style.display="none"
+    hidemessage();
+
     if(billamount.value>0){
-        if(cashGiven.value>=billamount){
+        if(cashGiven.value>=billamount.value){
+            const amounttobereturned=cashgiven.value-billamount.value;
+            calculatechange(amounttobereturned);
 
         }
         else{
+            showmessage("The Cash provided should atleast be equal to the bill amount")
 
         }
     }
     else{
-        showmessage("Invalid Cash-Amount");
+        showmessage("Invalid bill-Amount");
         
         
     }
-})
+});
 
-function showmessage(message){
-    message.style.display="block"
-    message.innerText="The bill Amount Should Be Greater Than 0"
+
+// function calculatechange(){}
+
+function hidemessage(){
+    message.style.display="none";
+
+
+}
+function showmessage(msg){
+    message.style.display="block";
+    message.innerText=msg;
+    
+
 
 }
 
